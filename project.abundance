@@ -7,8 +7,112 @@
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "c5d86318-5f55-475a-8a37-647801a55ca8",
+            "ioValues": [],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.26520051746442436,
+            "y": 0.5911413969335605,
+            "uniqueID": "f414be89-a56a-4cdc-acf9-3f85bb4ef5b6",
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 24
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.18585597240189736,
+            "y": 0.819420783645656,
+            "uniqueID": "ccdb31fe-48b9-483e-b3b9-4f03481aa61a",
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 12
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.2971108236308754,
+            "y": 0.7802385008517888,
+            "uniqueID": "f4961c31-7472-4ab9-8d90-a27a96b51b71",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "ccdb31fe-48b9-483e-b3b9-4f03481aa61a"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 6
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 6
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.4307891332470893,
+            "y": 0.5621805792163543,
+            "uniqueID": "7a2ec82d-13de-454d-ba96-0cdf02402d8a",
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": "f414be89-a56a-4cdc-acf9-3f85bb4ef5b6"
+                },
+                {
+                    "name": "Shape 2",
+                    "ioValue": "f4961c31-7472-4ab9-8d90-a27a96b51b71"
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": "f414be89-a56a-4cdc-acf9-3f85bb4ef5b6",
+            "ap2ID": "7a2ec82d-13de-454d-ba96-0cdf02402d8a"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "ccdb31fe-48b9-483e-b3b9-4f03481aa61a",
+            "ap2ID": "f4961c31-7472-4ab9-8d90-a27a96b51b71"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": "f4961c31-7472-4ab9-8d90-a27a96b51b71",
+            "ap2ID": "7a2ec82d-13de-454d-ba96-0cdf02402d8a"
+        }
+    ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
     "compiledBom": {},
