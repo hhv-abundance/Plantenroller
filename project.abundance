@@ -14,7 +14,12 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": "c5d86318-5f55-475a-8a37-647801a55ca8",
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "255ab7ba-7ed1-427a-97e5-d25e7a4995d2"
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -304,6 +309,24 @@
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.5721949038891373,
+            "y": 0.7457337883959045,
+            "uniqueID": "f35429c2-c4d6-41cc-aefa-b4c1a68a88c6",
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new rectangle."
         }
     ],
     "allConnectors": [
@@ -334,10 +357,17 @@
             "ap2Primary": false,
             "ap1ID": "82c4becb-aef0-4196-9b79-ff1eda50b3e4",
             "ap2ID": "04b9dc23-0f05-4846-ac3e-fd87e13d921f"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "255ab7ba-7ed1-427a-97e5-d25e7a4995d2",
+            "ap2ID": "c5d86318-5f55-475a-8a37-647801a55ca8"
         }
     ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
